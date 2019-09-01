@@ -1,4 +1,16 @@
 <?php
+// update checker
+/*
+require_once get_stylesheet_directory_uri( 'function_inc/update-checker.php' );*/
+$update_json_path = 'https://raw.githubusercontent.com/yamamotohiroyuki/wp-mitama/master/theme.json';
+$thema_name = 'mitama';
+require get_template_directory() . '/plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+  $update_json_path, // (A)
+    __FILE__,
+    $thema_name // (B)
+);
+
 $parent_func = get_parent_theme_file_path() . '/function_inc';
 $child_func = get_stylesheet_directory() . '/function_inc';
 // 子テーマ用のスクリプト
