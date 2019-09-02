@@ -45,8 +45,8 @@
       font-weight: bold;
     }
     figure {
-      display: block; padding: 2.0rem 0; margin: 0 auto;
-      max-width: 460px;
+      display: block; padding: 1.0rem 0; margin: 0 auto;
+      max-width: 420px;
       img {
         vertical-align: bottom;
       }
@@ -70,13 +70,10 @@
     &__message {
       display: block; padding: 0; margin: 0;
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
       h2 {
-        font-size: 1.5rem;
-        strong {
-          font-size: 2.00rem;
-        }
+        font-size: 1.75rem;
       }
     }
   }
