@@ -24,7 +24,7 @@
     <div class="top-contents-list__cell">
       <div class="top-contents-card">
         <a href="<?php echo $page_link; ?>">
-          <figure class="top-contents-card__photo"><img src="<?php echo temp_add('img') ?>/istockphoto-515645702-2048x2048.jpg" alt=""></figure>
+          <figure class="top-contents-card__photo"><?php the_post_thumbnail('contents_thumbnail'); ?></figure>
           <div class="top-contents-card__body">
             <h2><?php echo $global_menu_name; ?></h2>
             <p><?php echo $global_menu_name_ja; ?></p>
