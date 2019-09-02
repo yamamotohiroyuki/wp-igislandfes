@@ -4,7 +4,6 @@
     <nav class="global-footer__sns">
       <ul>
         <li><a href="https://www.facebook.com/<?php the_field('global_facebook_url','option'); ?>/" class="global-footer__sns--facebook" target="_blank"></a></li>
-        <li><a href="https://www.instagram.com/<?php the_field('global_instagram_url','option'); ?>/" class="global-footer__sns--instagram" target="_blank"></a></li>
       </ul>
     </nav><!-- / .global-footer__sns -->
   </div><!-- / .global-footer__header -->

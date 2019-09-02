@@ -238,3 +238,20 @@
 
 }
 
+
+
+
+.global-header__sns {
+  
+    a {
+      padding: 0 1.0rem;
+      text-align: center;
+      font-size: 1.5rem;
+      &::before {
+        display: block; padding: 0; margin: 0;
+        font-family:"Font Awesome 5 Brands";
+      }
+      &.global-header__sns--facebook::before { content: '\f082'; }
+      &.global-header__sns--instagram::before { content: '\f16d'; }
+    }
+  }

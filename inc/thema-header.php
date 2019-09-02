@@ -39,6 +39,7 @@
     wp_reset_postdata();
     ?>
     </ul>
+    <p class="global-header__sns"><a href="https://www.facebook.com/<?php the_field('global_facebook_url','option'); ?>/" class="global-header__sns--facebook" target="_blank"></a></p><!-- / .global-footer__sns -->
   </nav><!-- / .global-navigation -->
   
 </header><!-- / .global-header -->
