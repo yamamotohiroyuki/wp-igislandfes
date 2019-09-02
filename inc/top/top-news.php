@@ -40,7 +40,6 @@
     </div>
     <script>
     $('.news-slick').slick({
-      dots: true,
       infinite: false,
       speed: 300,
       slidesToShow: 3,
