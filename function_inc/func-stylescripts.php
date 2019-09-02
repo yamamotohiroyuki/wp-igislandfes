@@ -26,16 +26,12 @@ function add_child_scripts() {
   wp_enqueue_script('global', $assets_js.'/global.js', array(), $verdate, true);
   
   //css
-  wp_enqueue_style ( 'google-fonts', $googlefont.'/css?family=Noto+Sans+JP:400,700|Roboto:400,700&amp;subset=japanese');
+  wp_enqueue_style ( 'google-fonts', $googlefont.'/css?family=Montserrat:400,700&display=swap');
   wp_enqueue_style ( 'fontawesome-brands', $assets_vendor.'/fontawesome-brands/css/brands.min.css');
   
-  wp_enqueue_style ( 'modaal-css', $assets_vendor.'/modaal/css/modaal.min.css', array(), $verdate);
-  
-  wp_enqueue_style ( 'basicthema', $assets_css.'/basic-thema.css', array(), $verdate);
   wp_enqueue_style ( 'global', $assets_css.'/global.css', array(), $verdate);
   
   
 }
 add_action('wp_enqueue_scripts', 'add_child_scripts');
-
 

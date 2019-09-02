@@ -1,0 +1,61 @@
+/* Scss Document */
+/*====================================
+
+  0.Global
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    0.0. Global
+    0.1. Grobal brand
+    0.2. Global Menu
+    0.3. inquiry button
+    
+====================================*/
+
+
+/*====================================
+
+    0.0. Global
+
+====================================*/
+.global-svg-hide { display: none; }
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: $text_colr_main;
+  font-size: 1.0rem;
+  line-height: 1;
+  text-rendering: optimizeSpeed;
+  font-family: sans-serif;
+  /**/
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt" 1;
+  background-color: $background_color;
+}
+
+a {
+  color: $link_colr_main;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+/*====================================
+
+    0.1. Grobal brand
+
+====================================*/
+
+.brand-color {
+  .brand-color__and { fill: $brandcolor_main; }
+  .brand-color__groove { fill: $brandcolor_sub; }
+  .brand-color__andgroove_jp { fill: $brandcolor_main; }
+  &.is-no-jp {
+    .brand-color__andgroove_jp { display: none; }
+  }
+}
+

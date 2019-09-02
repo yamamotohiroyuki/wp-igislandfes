@@ -1,0 +1,181 @@
+/* Scss Document */
+
+/*====================================
+
+  1.Global Header
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    1.0. Global Header
+    1.1. Menu Trigger
+    1.2. Global Menu
+    1.3. Function button
+    
+====================================*/
+
+/*====================================
+
+    1.0. Global Header
+
+====================================*/
+
+/*
+<footer class="global-footer">
+  <div class="global-footer__header">
+    <p class="global-footer__brand"><a href="<?php echo home_url() ?>"><img src="<?php echo temp_add('img/global') ?>/brand-igislandfes-2019-full-white.svg" alt="IG ISLAND FES 2019 in Ishigaki"></a></p>
+    <nav class="global-footer__sns">
+      <ul>
+        <li><a href="https://www.facebook.com/<?php the_field('global_facebook_url','option'); ?>/" class="global-footer__sns--facebook" target="_blank"></a></li>
+        <li><a href="https://www.instagram.com/<?php the_field('global_instagram_url','option'); ?>/" class="global-footer__sns--instagram" target="_blank"></a></li>
+      </ul>
+    </nav><!-- / .global-footer__sns -->
+  </div><!-- / .global-footer__header -->
+  <div class="global-footer__data">
+    <p class="global-copyright"><small>&copy; IG ISLAND FES All Rights Reserved.</small></p>
+  </div><!-- / .global-footer__data -->
+</footer><!-- / .global-footer -->
+*/
+
+/* =======================================================
+    Global Footer
+======================================================== */
+.global-footer {
+  display: block; padding: 0; margin: 0;
+  @include global-gradient;
+  a {
+    color: #fff;
+  }
+}
+
+/* =======================================================
+    Global Footer header
+======================================================== */
+.global-footer__header {
+  display: block; padding: 2.0rem 1.0rem; margin: 0;
+}
+
+
+/* =======================================================
+    Global Footer brand
+======================================================== */
+.global-footer__brand {
+  display: block; padding: 0; margin: 0 auto;
+  max-width: 80px;
+  img {
+    max-width: 80px; height: 80px;
+    vertical-align: bottom;
+  }
+}
+
+/* =======================================================
+    Global Footer sns
+======================================================== */
+
+.global-footer__sns {
+  display: block; padding: 1.5rem 0 0 0; margin: 0;
+  &::before {
+    display: block; padding: 0; margin: 0 auto 1.5rem auto;
+    width: 100px; height: 1px;
+    background-color: #fff;
+    content: '';
+  }
+  ul {
+    display: flex; padding: 0; margin: 0;
+    justify-content: center;
+    align-items: center; align-content: center;
+    li {
+      display: block; padding: 0 1.0rem; margin: 0;
+      a {
+        display: block; padding: 0; margin: 0; text-align: center;
+        width: 1.0rem;
+        &::before {
+          display: block; padding: 0; margin: 0;
+          font-family:"Font Awesome 5 Brands";
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+.global-footer__sns--facebook::before { content: '\f39e'; }
+.global-footer__sns--instagram::before { content: '\f16d'; }
+
+/* =======================================================
+    Global Footer data
+======================================================== */
+.global-footer__data {
+  display: block; padding: 2.0rem 1.0rem; margin: 0;
+  color: #fff;
+  font-size: 0.875em; line-height: 1.2;
+  a:hover {
+    
+  }
+  nav {
+    display: block; padding: 0; margin: 0;
+    ul {
+      display: block; padding: 0.5rem 0; margin: 0;
+    }
+    li {
+      display: block; padding: 0 1.0rem 1.5rem 1.0rem; margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+
+@media (min-width: 576px) {
+  
+}
+
+@media (min-width: 768px) {
+  .global-footer__data {
+    display: flex;
+    justify-content: center;
+    align-content: center; align-items: center;
+    nav {
+      ul {
+        display: flex; padding: 0;
+        align-content: center; align-items: center;
+      }
+      li {
+        padding: 0 1.0rem;
+        border-left: solid 1px #fff;
+        &:first-child {
+          border-left: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) { }
+
+@media (min-width: 1200px) { }
+/* =======================================================
+    Global Copyright
+======================================================== */
+
+.global-copyright {
+  display: flex; padding: 0 1.0rem; margin: 0;
+  flex-direction: column;
+  text-align: center;
+  @include google_font;
+  text-align: center;
+  font-size: 0.750rem;
+  span {
+    display: block; padding: 1.0rem 0; margin: 0 auto;
+    width: 200px;
+    min-height: 1.5rem;
+  }
+  small { display: block; padding: 0; margin: 0; }
+}
+@media (min-width: 768px) {
+  .global-copyright {
+    text-align: right;
+    flex-direction: row;
+    align-content: center; align-items: center;
+    span { padding: 0 1.0rem; margin: 0; }
+    small { padding: 0; }
+  }
+}

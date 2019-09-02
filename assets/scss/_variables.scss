@@ -1,0 +1,45 @@
+/* Scss Document */
+
+
+
+/* テーマカラー */
+$brandcolor_main: #2CA6E0;
+$brandcolor_sub: #fff;
+
+$brandcolor_gradient-1: #41E4D8;
+$brandcolor_gradient-2: #2CA6E0;
+$brandcolor_gradient-3: #2ad392;
+
+$background_color: #F7F6F5;
+$header_background_color: #fff;
+
+$text_colr_main: #000;
+$text_colr_sub: #666;
+
+$title_color: #000;
+$line_color: #ddd;
+
+$link_colr_main: #000;
+$link_colr_main_hover: #2CA6E0;
+
+
+$global_sp_header_h: 60px;
+$global_pc_header_h: 100px;
+
+$list_size_m: 60px;
+
+$title_min_h: 30px;
+
+$input_radius: 0.25rem;
+
+@mixin google_font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+@mixin google_font_bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+@mixin global-gradient {
+  background: linear-gradient(135deg, $brandcolor_gradient-1 0%,$brandcolor_gradient-2 50%,$brandcolor_gradient-3 100%);
+}

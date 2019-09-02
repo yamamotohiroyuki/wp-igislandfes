@@ -1,0 +1,92 @@
+/* Scss Document */
+
+/*====================================
+
+  1.Global Header
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    1.0. Global Header
+    1.1. Menu Trigger
+    1.2. Global Menu
+    1.3. Function button
+    
+====================================*/
+
+/*====================================
+
+    1.0. Global Header
+
+====================================*/
+
+/* =======================================================
+    Global Header
+======================================================== */
+.jumbotron {
+  display: flex; padding: $global_sp_header_h 1.0rem; margin: 0;
+  min-height: 100vh;
+  justify-content: center; align-items: center;
+  background-image: url("../img/istockphoto-1125690913-2048x2048.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  &__inner {
+    display: block; padding: 2.0rem 0; margin: 0;
+  }
+  &__message {
+    display: block; padding: 0; margin: 0;
+    color: #fff;
+    text-shadow: 0 0 1.0rem rgba(0,0,0,0.6);
+    text-align: center;
+    h1 {
+      display: block; padding: 0; margin: 0;
+      font-size: 1.0rem; line-height: 1.2;
+      font-weight: bold;
+    }
+    figure {
+      display: block; padding: 2.0rem 0; margin: 0 auto;
+      max-width: 460px;
+      img {
+        vertical-align: bottom;
+      }
+    }
+    h2 {
+      display: block; padding: 0; margin: 0;
+      font-size: 0.875rem; line-height: 1.4;
+      font-weight: bold;
+      strong {
+        display: block; padding: 0; margin: 0;
+        font-size: 1.00rem;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 992px) {
+  .jumbotron {
+    padding: $global_pc_header_h 1.0rem;
+    &__message {
+      display: block; padding: 0; margin: 0;
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+        strong {
+          font-size: 2.00rem;
+        }
+      }
+    }
+  }
+
+}
+
+
+/*
+
+      <h1>2019.10.20.SUN 石垣市新栄公園多目的広場特設会場</h1>
+      <figure><img src="<?php echo temp_add('img/global') ?>/brand-igislandfes-2019-full-white.svg" alt="IG ISLAND FES 2019 in Ishigaki"></figure>
+      <h2>2019年10月20日(日)<br>石垣優良ダイビングサイト 島ぽよ presents<br>IG ISLAND FES 2019 in Ishigaki<br>開催決定!!</h2>
+*/

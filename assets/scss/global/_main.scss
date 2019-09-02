@@ -1,0 +1,286 @@
+/* Scss Document */
+
+/*====================================
+
+  1.Global Header
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    1.0. Global Header
+    1.1. Menu Trigger
+    1.2. Global Menu
+    1.3. Function button
+    
+====================================*/
+
+/*====================================
+
+    1.0. Global Header
+
+====================================*/
+
+/* =======================================================
+    Global Header
+======================================================== */
+.global-main {
+  display: block; padding: 0; margin: 0;
+  background-color: $background_color;
+}
+
+.global-section {
+  display: block; padding: 2.0rem 1.0rem; margin: 0 auto;
+  max-width: calc(1400px + 2.0rem);
+}
+
+
+.news-top {
+  display: block; padding: 2.0rem 1.0rem; margin: 0;
+  @include global-gradient;
+  border-radius: 0.5rem;
+}
+
+
+.function-title {
+  display: flex; padding: 1.0rem 0; margin: 0;
+  align-items: center;
+  color: #fff;
+  @include google_font_bold;
+  &__title {
+    display: block; padding: 0 1.0rem 0 1.0rem; margin: 0;
+    width: 100%; flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  &__menu {
+    display: none; padding: 0 1.0rem; margin: 0;
+    width: 300px; flex-grow: 0;
+    font-size: 1.0rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .function-title {
+    &__title {
+      padding: 0 1.0rem 0 calc(1.0rem + 300px);
+      font-size: 2.0rem;
+    }
+    &__menu {
+      display: block;
+      ul {
+        display: flex; padding: 0; margin: 0 -1.0rem;
+        justify-content: flex-end;
+        li {
+          display: block; padding: 0 1.0rem; margin: 0;
+          a {
+            display: block; padding: 0; margin: 0;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+.news-top__header {
+  .function-title__menu {
+    display: none;
+  }
+}
+.news-top__footer {
+  display: block; padding: 1.0rem 0 0 0;
+  text-align: right;
+  @include google_font_bold;
+  font-size: 0.875rem;
+  a {
+    color: #fff;
+  }
+}
+@media (min-width: 992px) {
+  .news-top__header {
+    .function-title__menu {
+      display: block;
+    }
+  }
+  .news-top__footer {
+    display: none;
+  }
+  
+}
+
+
+
+.news-card {
+  display: block; padding: 0.25rem; margin: 0;
+  a {
+    display: block; padding: 1.5rem; margin: 0;
+    background-color: #fff; color: $link_colr_main;
+    border-radius: 0.25rem;
+    &:hover {
+      color: $link_colr_main_hover;
+    }
+  }
+  p {
+    display: block; padding: 1.0rem 0 0.25rem 0; margin: 0;
+    @include google_font_bold;
+    font-size: 0.875rem;
+  }
+  h3 {
+    display: block; padding: 0.25rem 0 1.0rem 0; margin: 0;
+    font-size: 1.0rem; line-height: 1.4;
+  }
+}
+
+@media (min-width: 992px) {
+  .news-card {
+    a {
+    }
+    p {
+    }
+    h3 {
+    }
+  }
+
+}
+
+
+
+.slick-slider {
+  .slick-arrow {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: calc(50% - 20px);
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0 0.25rem rgba(0,0,0,0.4);
+    border-radius: 50%;
+    z-index: 10;
+    &::before {
+      display: block; padding: 0; margin: auto;
+      position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+      width: 40px; height: 40px;
+      font-family: basicicon!important;
+      font-size: 1.5rem; line-height: 40px;
+      text-align: center;
+    }
+    &:active {
+      color: #000;
+    }
+    &.slick-disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    &.slick-prev {
+      left: -25px;
+      &::before {
+        content: '\e900';
+      }
+    }
+    &.slick-next {
+      right: -25px;
+      &::before {
+        content: '\e901';
+      }
+
+    }
+  }
+}
+
+
+
+
+
+.top-contents-list {
+  display: flex; padding: 0; margin: 0 -1.0rem;
+  flex-wrap: wrap;
+  &__cell {
+    display: flex; padding: 1.0rem; margin: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .top-contents-list {
+    &__cell {
+      width: 50%;
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  .top-contents-list {
+    &__cell {
+      width: 33.3333%;
+    }
+  }
+
+}
+
+
+.top-contents-card {
+  display: block; padding: 0; margin: 0;
+  background-color: #fff;
+  box-shadow: 0 0 0.25rem rgba(0,0,0,0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  &__photo {
+    border-radius: 0.5rem 0.5rem 0 0;
+    overflow: hidden;
+  }
+  &__body {
+    display: block; padding: 1.0rem; margin: 0;
+    text-align: center;
+    h2 {
+      display: block; padding: 0; margin: 0 0 0.5rem 0;
+      @include google_font_bold;
+      font-size: 1.25rem;
+      
+    }
+    p {
+      display: block; padding: 0; margin: 0;
+      font-size: 0.875rem;
+      color: #666;
+      
+    }
+  }
+}
+@media (min-width: 576px) {
+  .top-contents-list {
+    &__cell {
+      width: 50%;
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  .top-contents-list {
+    &__cell {
+      width: 33.3333%;
+    }
+  }
+
+}
+/*
+
+  <div class="top-contents-list">
+    <div class="top-contents-list__cell">
+      <div class="top-contents-card">
+        <figure class="top-contents-card__photo"><img src="<?php echo temp_add('img') ?>/istockphoto-515645702-2048x2048.jpg" alt=""></figure>
+        <div class="top-contents-card__body">
+          <h2>EVENT INFO</h2>
+          <p>イベント情報</p>
+        </div>
+      </div>
+    </div>
+
+
+*/
