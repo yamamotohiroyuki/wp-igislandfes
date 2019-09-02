@@ -41,19 +41,19 @@
     text-align: center;
     figure {
       display: block; padding: 0 0 1.0rem 0; margin: 0 auto;
-      max-width: 420px;
+      max-width: 400px;
       img {
         vertical-align: bottom;
       }
     }
     h1 {
       display: block; padding: 0; margin: 0;
-      font-size: 1.0rem; line-height: 1.2;
+      font-size: 0.875rem; line-height: 1.2;
       font-weight: bold;
     }
     h2 {
       display: block; padding: 0.5rem; margin: 0.5rem 0;
-      font-size: 0.875rem; line-height: 1.4;
+      font-size: 1.0rem; line-height: 1.4;
       font-weight: bold;
       @include global-gradient;
     }
@@ -72,10 +72,10 @@
     &__message {
       display: block; padding: 0; margin: 0;
       h1 {
-        font-size: 1.25rem;
+        font-size: 1.00rem;
       }
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
       h3 {
         display: block; padding: 0; margin: 0;
