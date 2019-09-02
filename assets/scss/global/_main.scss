@@ -263,15 +263,32 @@
 }
 
 
-.top-contents-card {
+.contents-card {
   display: block; padding: 0; margin: 0;
   background-color: #fff;
   box-shadow: 0 0 0.25rem rgba(0,0,0,0.2);
   border-radius: 0.5rem;
   overflow: hidden;
+  a {
+    display: block; padding: 0; margin: 0;
+  }
   &__photo {
     border-radius: 0.5rem 0.5rem 0 0;
     overflow: hidden;
+    img {
+      vertical-align: bottom;
+      transition: all 0.5s;
+      position: relative;
+    }
+  }
+  
+  &:hover {
+    .contents-card__photo {
+      img {
+        transform: scale(1.2,1.2);
+      }
+    }
+    
   }
   &__body {
     display: block; padding: 1.0rem; margin: 0;

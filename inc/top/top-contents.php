@@ -22,10 +22,10 @@
     ?>
     
     <div class="top-contents-list__cell">
-      <div class="top-contents-card">
+      <div class="contents-card">
         <a href="<?php echo $page_link; ?>">
-          <figure class="top-contents-card__photo"><?php the_post_thumbnail('contents_thumbnail'); ?></figure>
-          <div class="top-contents-card__body">
+          <figure class="contents-card__photo"><?php the_post_thumbnail('contents_thumbnail'); ?></figure>
+          <div class="contents-card__body">
             <h2><?php echo $global_menu_name; ?></h2>
             <p><?php echo $global_menu_name_ja; ?></p>
           </div>
