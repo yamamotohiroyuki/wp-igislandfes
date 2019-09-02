@@ -54,7 +54,7 @@
   }
   &__menu {
     display: none; padding: 0 1.0rem; margin: 0;
-    width: 300px; flex-grow: 0;
+    width: 300px; flex-shrink: 0;
     font-size: 1.0rem;
   }
 }
@@ -114,22 +114,49 @@
 
 
 .news-card {
-  display: block; padding: 0.25rem; margin: 0;
-  a {
-    display: block; padding: 1.5rem; margin: 0;
+  display: block; padding: 0; margin: 0;
+  &__wrap {
+    display: block; padding: 0; margin: 0;
     background-color: #fff; color: $link_colr_main;
     border-radius: 0.25rem;
+    overflow: hidden;
     &:hover {
       color: $link_colr_main_hover;
     }
   }
+  &__photo {
+    display: block; padding: 0; margin: 0;
+    overflow: hidden;
+    border-radius: 0.25rem 0.25rem 0 0;
+    img {
+      vertical-align: bottom;
+      transition: all 0.5s;
+      position: relative;
+    }
+  }
+  &:hover {
+    .news-card__photo {
+      img {
+        transform: scale(1.2,1.2);
+      }
+    }
+    
+  }
+  
+  &__body {
+    display: block; padding: 1.0rem; margin: 0;
+  }
+  
+  
+  
+  
   p {
-    display: block; padding: 1.0rem 0 0.25rem 0; margin: 0;
+    display: block; padding: 0; margin: 0;
     @include google_font_bold;
     font-size: 0.875rem;
   }
   h3 {
-    display: block; padding: 0.25rem 0 1.0rem 0; margin: 0;
+    display: block; padding: 0.5rem 0; margin: 0;
     font-size: 1.0rem; line-height: 1.4;
   }
 }
@@ -146,7 +173,18 @@
 
 }
 
+/*
 
+      <div class="news-slick__cell news-card">
+        <a href="<?php echo get_permalink(); ?>" class="news-card__wrap">
+          <figure class="news-card__photo"><?php the_post_thumbnail('contents_thumbnail'); ?></figure>
+          <div class="news-card__body">
+            <p><time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date( 'Y.m.d' ); ?></time</p>
+            <h3><?php echo get_the_title(); ?></h3>
+          </div>
+        </a>
+      </div>
+*/
 
 .slick-slider {
   .slick-arrow {

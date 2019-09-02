@@ -5,57 +5,38 @@
       <h2 class="function-title__title">News</h2>
       <div class="function-title__menu">
         <ul>
-          <li><a href="#">Read More</a></li>
-          <li><a href="#">RSS</a></li>
+          <li><a href="#">View All</a></li>
         </ul>
       </div>
     </div>
     <div class="news-slick">
+      <?php
+      $args = array(
+        'post_type' => array('post')
+      );
+      $the_query = new WP_Query( $args );
+      if ( $the_query->have_posts() ) :
+        while ( $the_query->have_posts() ) : $the_query->the_post();
+      ?>
+      
       <div class="news-slick__cell news-card">
-        <a href="#">
-          <p>2019.00.00</p>
-          <h3>ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</h3>
+        <a href="<?php echo get_permalink(); ?>" class="news-card__wrap">
+          <figure class="news-card__photo"><?php the_post_thumbnail('contents_thumbnail'); ?></figure>
+          <div class="news-card__body">
+            <p><time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date( 'Y.m.d' ); ?></time</p>
+            <h3><?php echo get_the_title(); ?></h3>
+          </div>
         </a>
       </div>
-      <div class="news-slick__cell news-card">
-        <a href="#">
-          <p>2019.00.00</p>
-          <h3>ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</h3>
-        </a>
-      </div>
-      <div class="news-slick__cell news-card">
-        <a href="#">
-          <p>2019.00.00</p>
-          <h3>ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</h3>
-        </a>
-      </div>
-      <div class="news-slick__cell news-card">
-        <a href="#">
-          <p>2019.00.00</p>
-          <h3>ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</h3>
-        </a>
-      </div>
-      <div class="news-slick__cell news-card">
-        <a href="#">
-          <p>2019.00.00</p>
-          <h3>ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</h3>
-        </a>
-      </div>
-      <div class="news-slick__cell news-card">
-        <a href="#">
-          <p>2019.00.00</p>
-          <h3>ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</h3>
-        </a>
-      </div>
-      <div class="news-slick__cell news-card">
-        <a href="#">
-          <p>2019.00.00</p>
-          <h3>ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</h3>
-        </a>
-      </div>
+      
+      <?php
+        endwhile;
+      endif;
+      wp_reset_postdata();
+      ?>
     </div>
     <div class="news-top__footer">
-      <p><a href="#">Read More</a></p>
+      <p><a href="#">View All</a></p>
     </div>
     <script>
     $('.news-slick').slick({
