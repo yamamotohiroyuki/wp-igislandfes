@@ -187,7 +187,7 @@
 .profile-card {
   display: flex; padding: 1.0rem 0; margin: 0;
   width: 100%;
-  flex-direction: column-reverse;
+  flex-direction: column;
   &__body {
     display: block; padding: 0; margin: 0;
   }
