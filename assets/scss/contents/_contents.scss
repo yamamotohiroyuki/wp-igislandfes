@@ -130,6 +130,21 @@
   p {
     margin: 0.5rem 0;
   }
+  table {
+    width: 100%;
+    th,
+    td {
+      padding: 1.0rem;
+      border-bottom: solid 1px #ddd;
+    }
+    th {
+      background-color: rgba($brandcolor_main, 0.2);
+      color: $brandcolor_main;
+      text-align: left;
+    }
+    td {
+    }
+  }
 }
 
 
