@@ -1,7 +1,13 @@
 <div class="contents-header">
   <div class="contents-header__inner title-set">
     <?php
-    if(is_page()):
+    if(is_news() || is_page('news')):
+    ?>
+    <p class="title-set__parent-title">LATEST NEWS</p>
+    <h1 class="title-set__title">最新のお知らせ</h1>
+    <?php
+    
+    elseif(is_page()):
       $page_id = get_the_ID();
       if ( is_page() && $post->post_parent ):
         // 子ページのときの処理

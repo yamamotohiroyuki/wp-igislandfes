@@ -1,8 +1,6 @@
 // JavaScript Document
-/*
 document.oncontextmenu = function(){ return false; };
 document.body.oncontextmenu = "return false;"
-*/
 $(function (){
   window_fixer();
 
@@ -21,7 +19,8 @@ function window_fixer() {
     //var header_h = $('.global-header').outerHeight();
     var window_h = $(window).height();
     //var window_w = $(window).width();
-    var contents_h = window_h;
+  var footer_h = $('.global-footer').outerHeight();
+    var contents_h = window_h - footer_h;
     $('.global-main').css({
       "min-height": contents_h,
     });

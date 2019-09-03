@@ -5,7 +5,10 @@
       <h2 class="function-title__title">News</h2>
       <div class="function-title__menu">
         <ul>
-          <li><a href="#">View All</a></li>
+          <li><a href="<?php
+            $page = get_page_by_path('news');
+            echo get_permalink( $page->ID );
+            ?>">View All</a></li>
         </ul>
       </div>
     </div>
@@ -29,7 +32,7 @@
             endif;
             ?></figure>
           <div class="news-card__body">
-            <p><time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date( 'Y.m.d' ); ?></time</p>
+            <p><time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date( 'Y.m.d' ); ?></time></p>
             <h3><?php echo get_the_title(); ?></h3>
           </div>
         </a>
