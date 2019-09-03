@@ -111,7 +111,7 @@ function global_menu_page_link($page_id, $pagetitle) {
 
   $post_slug_class = "is-".$page->post_name;
 
-  $gm_link = '<a href="'.$page_link.'" class="js-same-category ' . $post_slug_class . '"><span>'.$page_title.'</span></a>';
+  $gm_link = '<a href="'.$page_link.'" class="js-same-category ' . $post_slug_class . ' parent-pageid-' . $page_id .'"><span>'.$page_title.'</span></a>';
 
   return $gm_link;
 }
