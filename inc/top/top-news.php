@@ -21,7 +21,13 @@
       
       <div class="news-slick__cell news-card">
         <a href="<?php echo get_permalink(); ?>" class="news-card__wrap">
-          <figure class="news-card__photo"><?php the_post_thumbnail('contents_thumbnail'); ?></figure>
+          <figure class="news-card__photo"><?php
+            if(has_post_thumbnail()):
+              the_post_thumbnail('news_thumbnail');
+            else:
+              echo '<img src="'. temp_add('img/global') .'/news_thumbnail_blank.png" alt="'.get_the_title().'">';
+            endif;
+            ?></figure>
           <div class="news-card__body">
             <p><time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date( 'Y.m.d' ); ?></time</p>
             <h3><?php echo get_the_title(); ?></h3>

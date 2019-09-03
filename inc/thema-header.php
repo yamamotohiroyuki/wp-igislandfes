@@ -11,7 +11,7 @@
   </div><!-- / .global-header__header -->
   
   <nav class="global-navigation">
-    <ul>
+    <div class="global-navigation__main">
     <?php
     $args = array(
       'post_type' => array('page'),
@@ -30,16 +30,34 @@
       $page_id = get_the_ID();
       $global_menu_name = get_field('global_menu_name', $page_id);
     ?>
-      <li><?php
-        echo global_menu_page_link($page_id, $global_menu_name);
-      ?></li>
+      <dl>
+        <dt><?php
+          echo global_menu_page_link($page_id, $global_menu_name);
+          // 指定したIDの子ページ一覧を表示
+          $children = wp_list_pages(array( // 固定ページのリストの取得
+            'title_li' => '', // 見出しを非表示
+            'child_of' => $page_id, // 固定ページのIDを指定
+            'echo' => '0' // PHP で使うために HTML テキストとして返す
+          ));
+          
+          if($children): // 子ページがあれば一覧を表示
+        ?><button class="js-accordion-trigger"></button><?php
+          endif;
+        ?></dt>
+        <?php
+          if($children): // 子ページがあれば一覧を表示
+            echo '<dd><ul>';
+            echo $children;
+            echo '</ul></dd>';
+          endif;
+        ?>
+        </dl>
     <?php
       endwhile;
     endif;
     wp_reset_postdata();
     ?>
-    </ul>
-    <p class="global-header__sns"><a href="https://www.facebook.com/<?php the_field('global_facebook_url','option'); ?>/" class="global-header__sns--facebook" target="_blank"></a></p><!-- / .global-footer__sns -->
+    </div>
+    <p class="global-navigation__sns"><a href="https://www.facebook.com/<?php the_field('global_facebook_url','option'); ?>/" class="global-header__sns--facebook" target="_blank"></a></p><!-- / .global-footer__sns -->
   </nav><!-- / .global-navigation -->
-  
 </header><!-- / .global-header -->

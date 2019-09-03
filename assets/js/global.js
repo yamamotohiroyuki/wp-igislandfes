@@ -46,6 +46,17 @@ $(document).on('click', '.js-globalmenu-trigger', function () {
 
 
 
+$(document).on('click', '.js-accordion-trigger', function () {
+  if ($(this).hasClass("is-close")){
+    $(this).removeClass("is-close");
+    $(this).parents('dl').removeClass("is-open");
+  } else {
+    $(this).addClass("is-close");
+    $(this).parents('dl').addClass("is-open");
+  }
+});
+
+
 ///////////////////////////////////////////  page scroll
 
 $(function(){

@@ -1,14 +1,14 @@
-<div class="common-page">
-  <?php
-  while ( have_posts() ) :
-    the_post();
-  ?>
-  <div class="common-page__inner">
-    <div class="contents-style">
-      <?php the_content(); ?>
-    </div>
+
+<?php
+while ( have_posts() ) :
+  the_post();
+  get_template_part( 'inc/contents' , 'header');
+?>
+<div class="contents-main">
+  <div class="contents-style">
+    <?php the_content(); ?>
   </div>
-  <?php
-  endwhile;
-  ?>
 </div>
+<?php
+endwhile;
+?>

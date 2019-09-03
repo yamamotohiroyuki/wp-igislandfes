@@ -24,9 +24,104 @@
     Global Header
 ======================================================== */
 .global-main {
-  display: block; padding: 0; margin: 0;
+  display: block; padding: $global_sp_header_h 0 0 0; margin: 0;
   background-color: $background_color;
 }
+.is-top .global-main {
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .global-main { padding: $global_pc_header_h 0 0 0; }
+  .is-top .global-main { padding: 0; }
+}
+
+
+.contents-header {
+  display: block; padding: 1.0rem; margin: 0;
+  background-color: #12153E;
+  color: #fff;
+  &__inner {
+    display: block; padding: 1.0rem 0; margin: 0 auto;
+    max-width: 1400px;
+  }
+}
+@media (min-width: 992px) {
+  .contents-header {
+    padding: 2.0rem;
+  }
+}
+
+
+
+.title-set {
+  &__parent-title {
+    display: block; padding: 0 0 0.5rem 0; margin: 0;
+    @include google_font_bold;
+    font-size: 0.875rem;
+  }
+  &__title {
+    display: block; padding: 0; margin: 0;
+    font-weight: bold;
+    font-size: 1.125rem; line-height: 1.4;
+  }
+}
+@media (min-width: 992px) {
+  .title-set {
+    &__parent-title {
+      font-size: 1.0rem;
+    }
+    &__title {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.contents-main {
+  display: block; padding: 1.0rem 0; margin: 0;
+}
+@media (min-width: 992px) {
+  
+  .contents-main {
+    padding: 2.0rem 0;
+  }
+}
+
+
+.contents-style {
+  display: block; padding: 1.0rem; margin: 0 auto;
+  background-color: #fff;
+  font-size: 0.875rem; line-height: 1.6;
+  max-width: 1400px;
+}
+@media (min-width: 992px) {
+  .contents-style {
+    padding: 2.0rem;
+  }
+}
+
+/*
+<div class="contents-header">
+  <div class="contents-header__inner title-set">
+    <p class="title-set__parent-title">000000</p>
+    <h1 class="title-set__title">000000</h1>
+  </div>
+</div>
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .global-section {
   display: block; padding: 2.0rem 1.0rem; margin: 0 auto;
@@ -116,7 +211,7 @@
 .news-card {
   display: block; padding: 0; margin: 0;
   &__wrap {
-    display: block; padding: 0; margin: 0;
+    display: flex; padding: 1.0rem; margin: 0;
     background-color: #fff; color: $link_colr_main;
     border-radius: 0.25rem;
     overflow: hidden;
@@ -127,7 +222,8 @@
   &__photo {
     display: block; padding: 0; margin: 0;
     overflow: hidden;
-    border-radius: 0.25rem 0.25rem 0 0;
+    border-radius: 0.25rem;
+    width: 80px; flex-shrink: 0;
     img {
       vertical-align: bottom;
       transition: all 0.5s;
@@ -137,14 +233,15 @@
   &:hover {
     .news-card__photo {
       img {
-        transform: scale(1.2,1.2);
+        transform: scale(1.4,1.4);
       }
     }
     
   }
   
   &__body {
-    display: block; padding: 1.0rem; margin: 0;
+    display: block; padding: 0 0 0 1.0rem; margin: 0;
+    width: 100%; flex-grow: 1;
   }
   
   
