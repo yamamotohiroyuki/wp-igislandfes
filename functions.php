@@ -93,7 +93,7 @@ if( function_exists('acf_add_options_page') ) {
 function global_menu_page_link($page_id, $pagetitle) {
 
   //カスタムフィールドの判定
-  $replacement = get_field('site_link',$page_id);
+  $replacement = get_field('replacement',$page_id);
   
   $page = get_page($page_id);
 
@@ -104,7 +104,7 @@ function global_menu_page_link($page_id, $pagetitle) {
   endif;
 
   if($replacement != ""):
-    $page_link = $replacement. '" target="_blank';
+    $page_link = get_page_link($replacement);
   else:
     $page_link = get_page_link($page_id);
   endif;

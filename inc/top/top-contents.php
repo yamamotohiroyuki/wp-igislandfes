@@ -18,7 +18,13 @@
       $page_id = get_the_ID();
       $global_menu_name = get_the_title($page_id);
       $global_menu_name_ja = get_field('title_ja', $page_id);
-      $page_link = get_page_link($page_id);
+    
+      $replacement = get_field('replacement',$page_id);
+      if($replacement != ""):
+        $page_link = get_page_link($replacement);
+      else:
+        $page_link = get_page_link($page_id);
+      endif;
     ?>
     
     <div class="top-contents-list__cell">
