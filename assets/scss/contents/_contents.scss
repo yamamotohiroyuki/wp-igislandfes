@@ -185,7 +185,7 @@
 
 
 .profile-card {
-  display: flex; padding: 1.0rem 0; margin: 0;
+  display: flex; padding: 1.0rem 0 0 0; margin: 0;
   width: 100%;
   flex-direction: column;
   &__body {
@@ -321,32 +321,3 @@
     }
   }
 }
-/*
-
-
-      <div class="profile-card">
-        <div class="profile-card__data">
-          <figure class="profile-card__photo">photo</figure>
-          <div class="profile-card__sns">
-            <ul>
-              <li><a href="#" target="_blank" class="icon-website">Website</a></li>
-              <li><a href="#" target="_blank" class="icon-website">Blog</a></li>
-              <li><a href="#" target="_blank" class="icon-instagram">Instagram</a></li>
-              <li><a href="#" target="_blank" class="icon-facebook">facebook</a></li>
-              <li><a href="#" target="_blank" class="icon-youtube">Youtube</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="profile-card__body profile-data">
-          <p class="profile-data__job">自然写真家</p>
-          <h2 class="profile-data__name">関戸 紀倫 <small>せきと きりん</small></h2>
-          <p>東京にフランス人の父、日本人の母の間に生まれる。生まれて間もなくパリに移りフランス人として成長をし10年。</p>
-          <p>父は写真家、ダイビングインストラクターで小さい時から父にフィリピン、タイ、ガラパゴス諸島など自然豊かな場所に連れて行ってもらい自然が近いものとなり気づけば自分もダイビングを始め沖縄でダイビングインストラクターとして活動。</p>
-          <p>2年間ワーキングホリデーでオーストラリアへ行き現地のダイブクルーズなどでガイド経験をした後、帰国前にオーストラリアを一周することに決め車とカメラを購入し写真に専念する。</p>
-          <p>帰国後はフリーランスのカメラマンとして水中写真や陸の風景写真をメインに世界中の人々に世界の美しい自然を写真という形で見てもらい、より多くの方に自然を大切にしてもらいたい一心に日々世界を飛び回っている自然写真家である。</p>
-          <p>また、フランス語と英語のスキルを使い、日本の美しさを世界へ発信し、より多くの外国人に日本の良さを伝えるために日本の美しい風景も日々撮影している。</p>
-          <p>写真だけでなく、多くの映像制作にも携わっていたりとクリエーターの一面としても活動している。</p>
-        </div>
-      </div>
-
-*/
