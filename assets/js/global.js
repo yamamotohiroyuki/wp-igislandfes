@@ -1,7 +1,8 @@
 // JavaScript Document
+/*
 document.oncontextmenu = function(){ return false; };
 document.body.oncontextmenu = "return false;"
-
+*/
 $(function (){
   window_fixer();
 

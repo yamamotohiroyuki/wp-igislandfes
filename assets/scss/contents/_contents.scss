@@ -168,6 +168,12 @@
   }
 }
 
+.indent-list {
+  li {
+    &::before { padding-right: 1.0rem!important; }
+  }
+}
+
 /*
 
 
