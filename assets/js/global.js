@@ -115,4 +115,3 @@ $(window).scroll(function () {
   }
 });
 
-
