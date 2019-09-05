@@ -1,5 +1,8 @@
-<?php get_header(); ?>
-<?php get_template_part( 'inc/thema', 'header' ); ?>
+<?php
+get_header();
+get_template_part( 'inc/svg', 'assets' );
+get_template_part( 'inc/thema', 'header' );
+?>
 <main class="global-main">
   <?php
   $global_inc_root = 'inc/global/global';

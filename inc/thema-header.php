@@ -1,6 +1,12 @@
 <header class="global-header">
   <div class="global-header__header">
-    <h1 class="global-brand"><a href="/"><img src="<?php echo temp_add('img/global') ?>/brand-igislandfes-2019.svg" alt="IG ISLAND FES 2019 in Ishigaki"></a></h1>
+    <h1 class="global-brand">
+      <a href="/">
+        <svg class="brand-mark" viewBox="0 0 320 60">
+          <use class="svg-ig-island-brand" xlink:href="#svg-ig-island-brand"></use>
+        </svg>
+      </a>
+    </h1>
     <button class="global-header__trigger js-globalmenu-trigger">
       <span class="hamburger-icon">
         <span class="hamburger-icon__bar hamburger-icon__bar--1"></span><!-- / .hamburger-icon__bar hamburger-icon__bar--1 -->
