@@ -201,7 +201,7 @@
 
 
 .profile-card {
-  display: flex; padding: 0.5rem; margin: 0 0 0 1.0rem 0;
+  display: flex; padding: 0.5rem; margin: 0 0 1.0rem 0;
   width: 100%;
   border: solid 4px $brandcolor_main;
   flex-direction: column;
@@ -286,7 +286,7 @@
 }
 @media (min-width: 576px) {
   .profile-card {
-    padding: 1.0rem;
+    padding: 1.0rem; margin: 0 0 1.5rem 0;
     border-radius: 0.25rem;
     &__sns {
       ul {
@@ -302,7 +302,7 @@
 
 @media (min-width: 992px) {
   .profile-card {
-    padding: 2.0rem;
+    padding: 2.0rem; margin: 0 0 2.0rem 0;
     border-radius: 0.5rem;
     flex-direction: row;
     &__body {
