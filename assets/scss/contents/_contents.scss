@@ -145,6 +145,14 @@
     }
     td {
     }
+    
+    &.deadline {
+      th,td {
+        border: solid 1px #ddd;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -370,34 +378,4 @@
     
   }
 }
-
-/*
-        <p class="news-date"><time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date( 'Y.m.d' ); ?></time></p>
-        <h1 class="news-title"><?php echo get_the_title(); ?></h1>
-        <figure class="news-photo"><?php
-            the_post_thumbnail('large');
-          ?></figure>
-
-<div class="news-archive">
-  <div class="archive-list">
-    <ul>
-      <li>
-  <span class="archive-list__header">
-    <span class="archive-list__header--set">
-      <span class="archive-list__header--date"><time datetime="2019-01-22">2019.01.22</time></span>
-      <span class="archive-list__header--sticker">Uncategorized</span>
-    </span>
-  </span><!-- / .archive-list__header -->
-  <span class="archive-list__body">
-    <p>
-      <a href="http://igislandfes:1000/2019/01/22/hello-world/">Hello world!</a></p>
-  </span>
-</li>
-    </ul>
-  </div>
-</div>
-
-
-
-*/
 

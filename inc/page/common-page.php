@@ -9,6 +9,7 @@ while ( have_posts() ) :
     <div class="contents-style">
       
       <?php the_content(); ?>
+      
     </div>
   </div>
 </div>
