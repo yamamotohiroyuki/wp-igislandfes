@@ -259,6 +259,7 @@
     }
     ul {
       display: block; padding: 0; margin: 0;
+      background-color: rgba( 0,0,0,0.10);
       li {
         display: block; padding: 0; margin: 0;
         border-top: solid 1px #fff;
@@ -338,6 +339,7 @@
         
       }
       ul {
+        background-color: rgba( 0,0,0,0.0);
         li {
           a {
             text-align: center;
