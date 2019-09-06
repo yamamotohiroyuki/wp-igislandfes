@@ -7,6 +7,7 @@ while ( have_posts() ) :
 <div class="contents-main">
   <div class="contents-main__inner">
     <div class="contents-style">
+      
       <?php the_content(); ?>
     </div>
   </div>
