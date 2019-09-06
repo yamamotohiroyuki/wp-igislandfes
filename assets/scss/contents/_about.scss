@@ -1,0 +1,46 @@
+/* Scss Document */
+
+/*====================================
+
+  1.Global Header
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    1.0. Global Header
+    1.1. Menu Trigger
+    1.2. Global Menu
+    1.3. Function button
+    
+====================================*/
+
+/*====================================
+
+    1.0. Global Header
+
+====================================*/
+
+/* =======================================================
+    Global Header
+======================================================== */
+
+.about-contents {
+  display: flex; padding: 0; margin: 0;
+  flex-direction: column-reverse;
+  &__cell {
+    display: block; padding: 1.0rem; margin: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; flex-grow: 1;
+    min-height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .about-contents {
+    flex-direction: row;
+    &__cell {
+      padding: 4.0rem;
+    }
+  }
+}

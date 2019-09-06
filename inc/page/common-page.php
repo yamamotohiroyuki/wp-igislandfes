@@ -3,6 +3,16 @@
 while ( have_posts() ) :
   the_post();
   get_template_part( 'inc/contents' , 'header');
+
+  if(is_page('about')):
+?>
+<div class="contents-main">
+  <div class="contents-style">
+    <?php the_content(); ?>
+  </div>
+</div>
+<?php
+  else:
 ?>
 <div class="contents-main">
   <div class="contents-main__inner">
@@ -14,5 +24,6 @@ while ( have_posts() ) :
   </div>
 </div>
 <?php
+  endif;
 endwhile;
 ?>
