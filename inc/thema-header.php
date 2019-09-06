@@ -45,10 +45,6 @@
             'child_of' => $page_id, // 固定ページのIDを指定
             'echo' => '0' // PHP で使うために HTML テキストとして返す
           ));
-          
-          if($children): // 子ページがあれば一覧を表示
-        ?><button class="js-accordion-trigger"></button><?php
-          endif;
         ?></dt>
         <?php
           if($children): // 子ページがあれば一覧を表示

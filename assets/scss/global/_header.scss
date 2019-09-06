@@ -250,31 +250,12 @@
         border-left: solid 1px #fff;
         position: relative;
         flex-shrink: 0;
-        &:before,
-        &::after {
-          display: block; padding: 0; margin: auto;
-          width: 25%; height: 1px;
-          background-color: #fff; content: "";
-          position: absolute; top: 0; left: 0; bottom: 0; right: 0;
-          transition: all 0.5s;
-        }
-        &::before { transform: rotate(0); }
-        &::after { transform: rotate(90deg); }
-        &.is-close::before { transform: rotate(180deg); }
-        &.is-close::after { transform: rotate(0deg); }
       }
     }
     dd {
       display: block; padding: 0; margin: 0;
-      overflow: hidden; max-height: 0;
-      transition: all 0.5s;
       font-size: .875rem;
       font-weight: bold;
-    }
-    &.is-open {
-      dd {
-        max-height: 100vh;
-      }
     }
     ul {
       display: block; padding: 0; margin: 0;
@@ -395,6 +376,10 @@
           dt {
             a {
               color: $brandcolor_main;
+              &:hover {
+                color: #fff;
+                background-color: $brandcolor_main;
+              }
             }
           }
         }
