@@ -40,15 +40,14 @@
 }
 @media (min-width: 992px) {
   .about-contents {
-    flex-direction: row;
-    &__cell {
-      padding: 4.0rem;
-    }
     &:nth-child(odd){
       flex-direction: row;
     }
     &:nth-child(even){
       flex-direction: row-reverse;
+    }
+    &__cell {
+      padding: 4.0rem;
     }
   }
 }
