@@ -26,14 +26,16 @@
 
 .about-contents {
   display: flex; padding: 0; margin: 0;
-  flex-direction: column-reverse;
+  flex-direction: column;
   &__cell {
     display: block; padding: 1.0rem; margin: 0;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%; flex-grow: 1;
-    min-height: 300px;
+    &.is-image {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 300px;
+    }
   }
 }
 @media (min-width: 992px) {
