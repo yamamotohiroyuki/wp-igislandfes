@@ -203,7 +203,7 @@
 =========================================================== */
 
 .global-navigation {
-  display: block; padding: 0; margin: 0;
+  display: block; margin: 0;
   overflow: hidden;
   min-height: 0; max-height: 0; height: 0;
   transition: all 0.5s;
@@ -212,6 +212,7 @@
 }
 .is-globalmenu-open .global-navigation {
   min-height: 100vh; height: 100vh; height: auto;
+  overflow-y: auto;
 }
 @media (min-width: 992px) {
   .global-navigation,
@@ -222,6 +223,7 @@
     min-height: auto; max-height: none; height: auto;
     background-color: transparent;
     overflow: visible;
+    overflow-y: visible;
     font-size: 0.875em; line-height: 1.2;
     background: rgba(255,255,255,0);
   }
@@ -278,7 +280,7 @@
 
 @media (min-width: 992px) {
   .global-navigation__main {
-    display: flex;
+    display: flex; 
     dl {
       border-bottom: none;
       position: relative;
@@ -395,7 +397,7 @@
 
 
 .global-navigation__sns {
-  display: block; padding: 0 0;
+  display: block; padding: 0 0 6.0rem 0;
   a {
     padding: 0 1.0rem;
     text-align: center;
