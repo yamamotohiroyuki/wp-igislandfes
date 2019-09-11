@@ -427,3 +427,12 @@
   }
 }
 
+
+.underconstruction {
+  display: block; padding: 0; margin: 0;
+  background-image: url("../img/underconstruction/underconstruction-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+

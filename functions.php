@@ -48,22 +48,6 @@ if( function_exists('acf_add_options_page') ) {
     'redirect' => false
   ));
   
-  acf_add_options_sub_page(array( // 子ページ
-    'page_title' 	=> 'Drone Shot Settings', // ページタイトル
-    'menu_title'	=> 'Drone Shot', // メニュータイトル
-    'parent_slug'	=> 'theme-general-setting', // 親メニューのスラッグ
-  ));
-  
-  acf_add_options_sub_page(array( // 子ページ
-    'page_title' 	=> 'Drone Rental Settings', // ページタイトル
-    'menu_title'	=> 'Drone Rental', // メニュータイトル
-    'parent_slug'	=> 'theme-general-setting', // 親メニューのスラッグ
-  ));
-  acf_add_options_sub_page(array( // 子ページ
-    'page_title' 	=> 'field group set', // ページタイトル
-    'menu_title'	=> 'Field Group', // メニュータイトル
-    'parent_slug'	=> 'theme-general-setting', // 親メニューのスラッグ
-  ));
   
 }
 
