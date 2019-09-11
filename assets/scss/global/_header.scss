@@ -306,7 +306,7 @@
         }
       }
       dd {
-        max-height: 0;
+        max-height: 0; width: 0;
         position: absolute; top: $global_pc_header_h; right: 0;
         min-width: 14.0rem;
         @include global-gradient;
@@ -332,10 +332,12 @@
         dd {
           max-height: 100vh;
           opacity: 1.0;
+          width: 100%;
         }
         &.is-open {
           dd {
             max-height: 100vh;
+            width: 100%;
           }
         }
         
