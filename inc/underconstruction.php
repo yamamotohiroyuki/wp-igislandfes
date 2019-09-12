@@ -6,5 +6,5 @@
       $file_name = 'underconstruction';
     endif;
   ?>
-  <p><img src="<?php echo temp_add('img/underconstruction/').$file_name ?>" alt="underconstruction" class="shake-little"></p>
+  <p><img src="<?php echo temp_add('img/underconstruction/').$file_name ?>.png" alt="underconstruction" class="shake-little"></p>
 </div>
