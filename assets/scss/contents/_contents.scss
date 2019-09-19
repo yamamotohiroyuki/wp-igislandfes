@@ -441,8 +441,18 @@
       background-color: $brandcolor_main;
       border-radius: 0.25rem;
     }
-    a:hover{
-      background-color: #12153E;
+    a {
+      &:hover{
+        background-color: #12153E;
+      }
+      span {
+        &.companies-list__name {
+          &::after {
+            content: "\e983";
+          }
+
+        }
+      }
     }
     span {
       display: block; margin: 0;　padding: 0.25rem;
@@ -454,10 +464,6 @@
         font-weight: bold;
         font-size: 1.00rem;
         border-bottom: dotted 1px #fff;
-        &::after {
-          content: "\e983";
-        }
-        
       }
       &.companies-list__tel {
         @include google_font_bold;
