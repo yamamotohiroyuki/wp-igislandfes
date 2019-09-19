@@ -32,7 +32,7 @@ while ( have_posts() ) :
     <?php
     $args = array(
       'post_type' => array('yda'),
-      'order' => 'ASC',
+      'order' => 'DESC',
       'posts_per_page' => 9999
     );
     $the_query = new WP_Query( $args );
