@@ -51,8 +51,8 @@ while ( have_posts() ) :
         <div class="companies-list__no-link">
           <span class="companies-list__name"><?php echo $companies_name; ?></span>
           <span class="companies-list__tel"><?php echo $companies_tel; ?></span>
-        </a>
-      </div>
+        </div>
+      </li>
     <?php
       else:
     ?>
