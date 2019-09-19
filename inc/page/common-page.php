@@ -45,7 +45,7 @@ while ( have_posts() ) :
       $companies_name = get_the_title($page_id);
       $companies_link = get_field('companies-list-link', $page_id);
       $companies_tel = get_field('companies-list-tel', $page_id);
-      if($companies_tel == ''):
+      if($companies_link == ''):
     ?>
       <li>
         <div class="companies-list__no-link">
