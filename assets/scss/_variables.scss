@@ -43,3 +43,16 @@ $input_radius: 0.25rem;
 @mixin global-gradient {
   background: linear-gradient(135deg, $brandcolor_gradient-1 0%,$brandcolor_gradient-2 50%,$brandcolor_gradient-3 100%);
 }
+
+
+@mixin basic-icon {
+  font-family: basicicon;
+  font-weight: normal;
+}
+
+
+@mixin font-awesome {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: normal;
+}
+
