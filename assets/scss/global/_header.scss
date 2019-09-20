@@ -217,7 +217,7 @@
 @media (min-width: 992px) {
   .global-navigation,
   .is-globalmenu-open .global-navigation{
-    display: flex;
+    display: flex; padding: 0 1.0rem 0 0;
     align-content: center; align-items: center;
     justify-content: flex-end;
     min-height: auto; max-height: none; height: auto;
@@ -412,24 +412,22 @@
     }
     &.global-header__sns--facebook::before { content: '\f082'; }
     &.global-header__sns--instagram::before { content: '\f16d'; }
+    &.global-header__sns--contact::before {
+      font-family:basicicon;
+      content: '\e98e';
+    }
   }
 }
 
 
 @media (min-width: 992px) {
   .global-navigation__sns {
-    display: block; padding: 0 1.5rem;
+    display: block; padding: 0 0.25rem;
     a {
       padding: 0 1.0rem;
       text-align: center;
       font-size: 1.5rem;
       color: $brandcolor_main;
-      &::before {
-        display: block; padding: 0; margin: 0;
-        font-family:"Font Awesome 5 Brands";
-      }
-      &.global-header__sns--facebook::before { content: '\f082'; }
-      &.global-header__sns--instagram::before { content: '\f16d'; }
     }
   }
 }
@@ -439,7 +437,12 @@
 @media (min-width: 992px) {
   .is-top .global-header {
     .global-navigation__sns {
-      a { color: #fff; }
+      a {
+        color: #fff;
+        &:hover {
+          color: $brandcolor_main;
+        }
+      }
     }
     &.in-view {
       .global-navigation__sns {
