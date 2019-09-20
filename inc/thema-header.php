@@ -60,7 +60,7 @@
     wp_reset_postdata();
     ?>
     </div>
-    <p class="global-navigation__sns"><a href="https://docs.google.com/forms/d/e/<?php the_field('link_googleform','option'); ?>/" class="global-header__sns--contact" target="_blank"></a></p><!-- / .global-footer__sns -->
+    <p class="global-navigation__sns"><a href="https://docs.google.com/forms/d/e/<?php the_field('link_googleform','option'); ?>" class="global-header__sns--contact" target="_blank"></a></p><!-- / .global-footer__sns -->
     <!-- p class="global-navigation__sns"><a href="https://www.facebook.com/<?php the_field('link_facebook','option'); ?>/" class="global-header__sns--facebook" target="_blank"></a></p><!-- / .global-footer__sns -->
   </nav><!-- / .global-navigation -->
 </header><!-- / .global-header -->
