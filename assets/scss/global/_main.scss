@@ -155,7 +155,7 @@
 
 
 .news-card {
-  display: block; padding: 0; margin: 0;
+  display: block; padding: 0 0.25rem; margin: 0;
   &__wrap {
     display: flex; padding: 1.0rem; margin: 0;
     background-color: #fff; color: $link_colr_main;
@@ -206,6 +206,7 @@
 
 @media (min-width: 992px) {
   .news-card {
+     padding: 0 0.5rem;
     a {
     }
     p {
