@@ -161,12 +161,13 @@
     background-color: #fff; color: $link_colr_main;
     border-radius: 0.25rem;
     overflow: hidden;
+    flex-direction: column;
     &:hover {
       color: $link_colr_main_hover;
     }
   }
   &__photo {
-    display: block; padding: 0; margin: 0;
+    display: block; padding: 0; margin: 0 auto;
     overflow: hidden;
     border-radius: 0.25rem;
     width: 80px; flex-shrink: 0;
@@ -186,7 +187,7 @@
   }
   
   &__body {
-    display: block; padding: 0 0 0 1.0rem; margin: 0;
+    display: block; padding: 0.5rem 0 0 0; margin: 0;
     width: 100%; flex-grow: 1;
   }
   
@@ -203,6 +204,22 @@
     font-size: 1.0rem; line-height: 1.4;
   }
 }
+
+@media (min-width: 768px) {
+  .news-card {
+    &__wrap {
+      flex-direction: row;
+    }
+    &__photo {
+      display: block; padding: 0; margin: 0;
+    }
+    &__body {
+      padding: 0 0 0 1.0rem;
+    }
+  }
+
+}
+
 
 @media (min-width: 992px) {
   .news-card {
@@ -276,6 +293,13 @@
 }
 
 
+.slick-slide {
+  position: relative;
+  height: 100%;
+  > div {
+    display: flex;
+  }
+}
 
 
 

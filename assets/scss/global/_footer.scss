@@ -68,6 +68,22 @@
   }
 }
 
+
+
+.global-footer__navigation {
+  display: block; padding: 0; margin: 0;
+  ul {
+    display: flex; padding: 0; margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    li {
+      display: block; padding: 0.5rem; margin: 0;
+      @include google_font_bold;
+      font-size: 0.875rem; line-height: 1.2;
+      text-align: center;
+    }
+  }
+}
 /* =======================================================
     Global Footer sns
 ======================================================== */
@@ -118,7 +134,7 @@
     }
     li {
       display: block; padding: 0 1.0rem 1.5rem 1.0rem; margin: 0;
-      text-align: center;
+      text-align: center; 
     }
   }
 }

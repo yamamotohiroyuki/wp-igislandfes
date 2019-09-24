@@ -54,6 +54,7 @@
       slidesToShow: 3,
       slidesToScroll: 3,
       dots: false,
+      adaptiveHeight: false,
       responsive: [
         {
           breakpoint: 1024,
