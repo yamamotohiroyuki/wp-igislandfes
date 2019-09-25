@@ -506,3 +506,18 @@
   background-size: cover;
 }
 
+
+
+
+
+.interview-link {
+  display: inline-block;
+  padding: 0.5rem 1.0rem;
+  border-radius: 0.5rem; 
+  text-decoration: none;
+  color: #FFF;
+  background-image: linear-gradient(45deg, $brandcolor_gradient-1 0%,$brandcolor_gradient-2 100%);
+  &:hover {
+    background-image: linear-gradient(45deg, $brandcolor_gradient-2 0%, $brandcolor_gradient-1 100%);
+  }
+}
