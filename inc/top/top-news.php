@@ -45,7 +45,10 @@
       ?>
     </div>
     <div class="news-top__footer">
-      <p><a href="#">View All</a></p>
+      <p><a href="<?php
+            $page = get_page_by_path('news');
+            echo get_permalink( $page->ID );
+            ?>">View All</a></p>
     </div>
     <script>
     $('.news-slick').slick({
