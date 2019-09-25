@@ -23,6 +23,61 @@ while ( have_posts() ) :
   </div>
 </div>
   <?php
+    elseif(is_page('movie')):
+  ?>
+<div class="contents-main">
+  <div class="contents-style">
+    <?php the_content(); ?>
+    <ul class="gallery-list">
+      <?php
+      if(have_rows('movies')):
+        while(have_rows('movies')): the_row();
+          $movie_id = get_sub_field('movie');
+          $movie_text = get_sub_field('text');
+      ?>
+      <li>
+        <figure>
+          <a href="https://www.youtube.com/embed/<?php echo $movie_id; ?>" class="js-modal-video" data-group="gallery">
+            <img src="http://img.youtube.com/vi/<?php echo $movie_id; ?>/maxresdefault.jpg" alt="<?php echo $movie_text; ?>">
+            <span><?php echo $movie_text; ?></span>
+          </a>
+        </figure>
+      </li>
+      <?php
+        endwhile;
+      endif; ?>
+    </ul>
+  </div>
+</div>
+  <?php
+    elseif(is_page('photo')):
+  ?>
+<div class="contents-main">
+  <div class="contents-style">
+    <?php the_content(); ?>
+    <ul class="gallery-list">
+      <?php
+      if(have_rows('photos')):
+        while(have_rows('photos')): the_row();
+          $photo_url = wp_get_attachment_image_src(get_sub_field('photo'), 'contents_thumbnail');
+          $photo_large_url = wp_get_attachment_image_src(get_sub_field('photo'), 'large');
+          $photo_text = get_sub_field('text');
+      ?>
+      <li>
+        <figure>
+          <a href="<?php echo $photo_large_url[0]; ?>" class="js-modal-gallery" data-group="gallery">
+            <img src="<?php echo $photo_url[0]; ?>" alt="<?php echo $photo_text; ?>">
+            <span><?php echo $photo_text; ?></span>
+          </a>
+        </figure>
+      </li>
+      <?php
+        endwhile;
+      endif; ?>
+    </ul>
+  </div>
+</div>
+  <?php
     elseif(is_page('yda')):
   ?>
 <div class="contents-main">
