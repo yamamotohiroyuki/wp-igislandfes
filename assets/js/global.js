@@ -115,3 +115,10 @@ $(window).scroll(function () {
   }
 });
 
+
+$('.js-modal-video').modaal({
+  type: 'video'
+});
+$('.js-modal-gallery').modaal({
+  type: 'image'
+});

@@ -216,7 +216,7 @@
 }
 @media (min-width: 992px) {
   .global-navigation,
-  .is-globalmenu-open .global-navigation{
+  .is-globalmenu-open .global-navigation {
     display: flex; padding: 0 1.0rem 0 0;
     align-content: center; align-items: center;
     justify-content: flex-end;
@@ -272,6 +272,12 @@
             background-color: rgba( 0,0,0,0.10);
           }
           
+        }
+        ul.children {
+          font-size: 0.875rem;
+          a {
+            display: block; padding: 1.0rem 1.0rem 1.0rem 2.0rem;
+          }
         }
       }
     }

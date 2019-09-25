@@ -30,6 +30,7 @@ function add_child_scripts() {
   wp_enqueue_style ( 'fontawesome-brands', $assets_vendor.'/fontawesome-brands/css/brands.min.css');
   
   wp_enqueue_style ( 'global', $assets_css.'/global.css', array(), $verdate);
+  wp_enqueue_style ( 'modaal-style', $assets_vendor.'/modaal/css/modaal.min.css', array(), $verdate);
   
   
 }

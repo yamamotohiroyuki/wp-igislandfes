@@ -1,0 +1,81 @@
+/* Scss Document */
+
+/*====================================
+
+  1.Global Header
+
+    ----------------------------------
+        Structure
+    ----------------------------------
+    1.0. Global Header
+    1.1. Menu Trigger
+    1.2. Global Menu
+    1.3. Function button
+    
+====================================*/
+
+/*====================================
+
+    1.0. Global Header
+
+====================================*/
+
+/* =======================================================
+    Global Header
+======================================================== */
+
+.entry-sheet-table {}
+
+
+.dl-table {
+  display: table;
+  border-collapse: collapse;
+  &__caption {
+    display: table-caption
+  }
+  &__header {
+    display: table-header-group
+  }
+  &__body {
+    display: table-row-group
+  }
+  &__footer {
+    display: table-footer-group
+  }
+  .dl-table dl, .dl-table__body dl, .dl-table__footer dl, .dl-table__header dl {
+    display: table-row
+  }
+  .dl-table dl dd, .dl-table dl dt, .dl-table__body dl dd, .dl-table__body dl dt, .dl-table__footer dl dd, .dl-table__footer dl dt, .dl-table__header dl dd, .dl-table__header dl dt {
+    display: table-cell
+  }
+  
+  
+  
+}
+
+
+
+@media (min-width:768px) {
+  .dl-table:not(.no-responsive) {
+    display: table;
+    border-collapse: collapse
+  }
+  .dl-table:not(.no-responsive) .dl-table__caption {
+    display: table-caption
+  }
+  .dl-table:not(.no-responsive) .dl-table__header {
+    display: table-header-group
+  }
+  .dl-table:not(.no-responsive) .dl-table__body {
+    display: table-row-group
+  }
+  .dl-table:not(.no-responsive) .dl-table__footer {
+    display: table-footer-group
+  }
+  .dl-table:not(.no-responsive) .dl-table__body dl, .dl-table:not(.no-responsive) .dl-table__footer dl, .dl-table:not(.no-responsive) .dl-table__header dl, .dl-table:not(.no-responsive) dl {
+    display: table-row
+  }
+  .dl-table:not(.no-responsive) .dl-table__body dl dd, .dl-table:not(.no-responsive) .dl-table__body dl dt, .dl-table:not(.no-responsive) .dl-table__footer dl dd, .dl-table:not(.no-responsive) .dl-table__footer dl dt, .dl-table:not(.no-responsive) .dl-table__header dl dd, .dl-table:not(.no-responsive) .dl-table__header dl dt, .dl-table:not(.no-responsive) dl dd, .dl-table:not(.no-responsive) dl dt {
+    display: table-cell
+  }
+}
