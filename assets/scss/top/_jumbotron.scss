@@ -78,3 +78,90 @@
   }
 }
 
+
+
+.jumbotron-modal {
+  display: flex; padding: 2.0rem; margin: auto;
+  position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+  width: 100%; height: 100%;
+  justify-content: center; align-items: center;
+  z-index: 300;
+  overflow: hidden;
+}
+
+.jumbotron-modal-window {
+  display: block; padding: 1.0rem; margin: 0;
+  max-width: 800px;
+  background-color: rgba(255,255,255,1.00);
+  border-radius: 1.0rem;
+  box-shadow: 0 0 3.0rem rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+  opacity: 0;
+  transform: rotate(180deg) scale(0.2);
+  position: relative;
+  p.jumbotron-modal-window__close {
+    display: block; padding: 0; margin: 0;
+    position: absolute; top: -1.5rem; right: -1.5rem;
+    button {
+      @include button-reset;
+      display: block; padding: 0.5rem; margin: 0;
+      width: 3.0rem; height: 3.0rem;font-size: 2.0rem;
+      @include basic-icon;
+      border-radius: 50%;
+      color: #fff;
+      @include global-gradient;
+    }
+  }
+  h2 {
+    display: block; padding: 1.0rem; margin: 0;
+    @include google_font_bold;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: $brandcolor_main;
+    text-align: center;
+    
+  }
+  h3 {
+    display: block; padding: 1.0rem; margin: 0;
+    font-size: 1.75rem; font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    
+  }
+  p {
+    display: block; padding: 1.0rem; margin: 0 auto;
+    font-size: 1.0rem;
+    text-align: center;
+    max-width: 300px;
+    a {
+      display: block; padding: 1.0rem 2.0rem; margin: 0;
+      text-align: center;
+      font-size: 1.0rem; font-weight: 700;
+      border-radius: 0.25rem;
+      @include global-gradient;
+      color: #fff;
+      &:hover {
+        border-radius: 1.0rem;
+      }
+    }
+  }
+}
+
+
+.is-modal-open .jumbotron-modal-window {
+  opacity: 1.0;
+  transform: rotate(-2deg) scale(1.0);
+}
+
+
+/*
+
+  <div class="jumbotron-modal">
+    <div class="jumbotron-modal-window">
+      <p class="jumbotron-modal-window__close"><button>close</button></p>
+      <h2>Pickup News</h2>
+      <h3>ああああああああ</h3>
+      <p><a href="#">詳細はこちら</a></p>
+    </div>
+  </div>
+*/

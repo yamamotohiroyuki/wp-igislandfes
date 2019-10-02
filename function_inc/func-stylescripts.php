@@ -4,7 +4,10 @@
 function add_child_scripts() {
 
   $childrooter = get_stylesheet_directory_uri();
-  $googlefont = 'https://fonts.googleapis.com';
+  /*
+  $googlefont = 'https://fonts.googleapis.com/css?family=';
+  $escape_googlefont = 'Montserrat:400,700|Noto+Sans+JP:400,700&display=swap&subset=japanese';*/
+  
   $cdnjs_libs = '//cdnjs.cloudflare.com/ajax/libs';
 
   $assets_assets = $childrooter.'/assets';
@@ -26,7 +29,7 @@ function add_child_scripts() {
   wp_enqueue_script('global', $assets_js.'/global.js', array(), $verdate, true);
   
   //css
-  wp_enqueue_style ( 'google-fonts', $googlefont.'/css?family=Montserrat:400,700&display=swap');
+  //wp_enqueue_style ( 'google-fonts', addslashes($googlefont.$escape_googlefont));
   wp_enqueue_style ( 'fontawesome-brands', $assets_vendor.'/fontawesome-brands/css/brands.min.css');
   
   wp_enqueue_style ( 'global', $assets_css.'/global.css', array(), $verdate);

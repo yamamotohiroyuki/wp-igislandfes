@@ -12,6 +12,8 @@
   <link rel="mask-icon" href="<?php echo temp_add('/meta') ?>/safari-pinned-tab.svg" color="#2ca6e0">
   <meta name="msapplication-TileColor" content="#2ca6e0">
   <meta name="theme-color" content="#ffffff">
+  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Sans+JP:400,700&display=swap&subset=japanese" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 

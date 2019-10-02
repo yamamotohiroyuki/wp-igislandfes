@@ -58,11 +58,79 @@
 
 
 
+.top-sponsor {
+  display: block; padding: 1.0rem; margin: 0;
+  width: 100%;
+  h2 {
+    display: block; padding: 2.0rem 0 1.0rem 0; margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    span {
+      display: block; padding: 1.0rem; margin: 0 auto;
+      position: relative;
+      &::before {
+        display: block; padding: 0; margin: 0 0 0 -50px;
+        position: absolute; bottom: 0; left: 50%;
+        width: 100px; height: 2px;
+        @include global-gradient;
+        content: '';
+      }
+    }
+  }
+}
+
+.sponsor-list {
+  display: flex; padding: 0.5rem 0; margin: 0 auto;
+  max-width: 1400px; flex-wrap: wrap;
+  justify-content: center;
+  li {
+    display: block; padding: 0.5rem; max-width: 400px;
+    a {
+      display: block; padding: 0; margin: 0;
+      background-color: #fff;
+      color: $brandcolor_main;
+      span {
+        display: block; padding: 1.0rem; margin: 0 auto;
+        position: relative;
+        &::before {
+          display: block; padding: 0; margin: 0;
+          position: absolute; bottom: 0.5rem; right: 0.5rem;
+          @include basic-icon;
+          font-size: 1.0rem;
+          content: '\e983';
+        }
+      }
+    }
+  }
+}
 
 
-
-
-
+.sponsor-list-video {
+  display: flex; padding: 0.5rem 0; margin: 0 auto;
+  max-width: 1400px; flex-wrap: wrap;
+  justify-content: center;
+  li {
+    display: block; padding: 0.5rem; max-width: 400px;
+    a {
+      display: block; padding: 0; margin: 0;
+      color: #fff;
+      position: relative;
+      &::before {
+        display: block; padding: 0; margin: auto;
+        position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+        width: 4.0rem; height: 4.0rem;
+        text-align: center;
+        @include basic-icon;
+        font-size: 4.0rem;
+        line-height: 4.0rem;
+        content: '\ea49';
+      }
+    }
+  }
+  
+}
 
 
 
