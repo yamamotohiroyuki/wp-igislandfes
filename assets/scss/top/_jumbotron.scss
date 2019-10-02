@@ -23,10 +23,29 @@
 /* =======================================================
     Global Header
 ======================================================== */
+
+.jumbotron__inner,
+.jumbotron__bg {
+  filter: blur(0);
+  transition: all 0.5s;
+  transform:scale(1.0);
+}
+
+
+.is-modal-open .jumbotron__inner {
+  filter: blur(0.15rem);
+}
+
+.is-modal-open .jumbotron__bg {
+  filter: blur(1.5rem);
+  transform:scale(1.5);
+}
+
 .jumbotron {
   display: block; padding: 0; margin: 0;
   
   position: relative;
+  overflow: hidden;
   
   &__inner {
     display: flex; padding: $global_sp_header_h 0; margin: 0;
@@ -92,9 +111,9 @@
 .jumbotron-modal-window {
   display: block; padding: 1.0rem; margin: 0;
   max-width: 800px;
-  background-color: rgba(255,255,255,1.00);
+  background-color: rgba(255,255,255,0.85);
   border-radius: 1.0rem;
-  box-shadow: 0 0 3.0rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2.0rem 3.0rem rgba(0, 0, 0, 0.5);
   transition: all 0.5s;
   opacity: 0;
   transform: rotate(180deg) scale(0.2);
@@ -119,6 +138,7 @@
     font-size: 1.5rem;
     color: $brandcolor_main;
     text-align: center;
+    text-shadow: 0 2px 2px #fff, 0 0.25rem 0.5rem rgba($brandcolor_main, 0.5);
     
   }
   h3 {
@@ -126,6 +146,7 @@
     font-size: 1.75rem; font-weight: 700;
     line-height: 1.25;
     text-align: center;
+    text-shadow: 0 0.15rem 0.25rem #fff;
     
   }
   p {
