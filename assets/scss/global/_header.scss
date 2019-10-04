@@ -291,6 +291,7 @@
       border-bottom: none;
       position: relative;
       z-index: 1;
+      overflow: hidden;
       dt {
         display: flex; padding: 0; margin: 0;
         font-size: 1.0rem;
@@ -327,6 +328,7 @@
       }
       
       &:hover {
+        overflow: visible;
         z-index: 10;
         dt {
           background-color: $brandcolor_main;
@@ -407,9 +409,13 @@
 
 
 .global-navigation__sns {
-  display: block; padding: 0 0 6.0rem 0;
+  display: flex; padding: 1.0rem 0 6.0rem 0;
+  justify-content: center; width: 100%;
+  p {
+    display: block; padding: 0 1.0rem;
+  }
   a {
-    padding: 0 1.0rem;
+    padding: 0 0;
     text-align: center;
     font-size: 1.5rem;
     &::before {
@@ -428,11 +434,10 @@
 
 @media (min-width: 992px) {
   .global-navigation__sns {
-    display: block; padding: 0 0.25rem;
+    display: flex; padding: 0 0.25rem;
+    width: auto;
     a {
-      padding: 0 1.0rem;
-      text-align: center;
-      font-size: 1.5rem;
+      padding: 0;
       color: $brandcolor_main;
     }
   }

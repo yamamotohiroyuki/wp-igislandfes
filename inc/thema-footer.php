@@ -32,10 +32,9 @@
     </nav><!-- / .global-navigation -->
     
     <nav class="global-footer__sns">
-      <!-- ul>
+      <ul>
         <li><a href="https://www.facebook.com/<?php the_field('link_facebook','option'); ?>/" class="global-footer__sns--facebook" target="_blank"></a></li>
-        <li><a href="https://www.facebook.com/<?php the_field('link_facebook','option'); ?>/" class="global-footer__sns--facebook" target="_blank"></a></li>
-      </ul -->
+      </ul>
     </nav><!-- / .global-footer__sns -->
   </div><!-- / .global-footer__header -->
   <div class="global-footer__data">

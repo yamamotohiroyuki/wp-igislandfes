@@ -178,21 +178,42 @@
   p {
     margin: 0.5rem 0;
   }
+  a {
+    text-decoration: underline;
+    &:hover { color: $brandcolor_main; }
+  }
   table {
     width: 100%;
-      border-top: solid 1px #ddd;
+    border-top: solid 1px #ddd;
     th,
     td {
       padding: 1.0rem;
       border-bottom: solid 1px #ddd;
     }
-    th {
-      background-color: rgba($brandcolor_main, 0.05);
-      color: $brandcolor_main;
-      text-align: left;
+    thead {
+      th,
+      td {
+        padding: 0.5rem;
+        background-color: rgba($brandcolor_main, 0.2);
+        color: $brandcolor_main;
+        text-align: center;
+      }
+      th {
+        background-color: rgba($brandcolor_main, 0.25);
+      }
+      td {
+      }
     }
-    td {
+    tbody {
+      th {
+        background-color: rgba($brandcolor_main, 0.05);
+        color: $brandcolor_main;
+        text-align: left;
+      }
+      td {
+      }
     }
+    
     
     &.deadline {
       th,td {
@@ -201,8 +222,24 @@
         text-align: center;
       }
     }
+    &.time-table {
+      tbody {
+        th {
+          text-align: center;
+          @include google_font_bold;
+          font-size: 1.25rem;
+        }
+        td {
+          
+        }
+        
+      }
+      
+      
+    }
   }
 }
+
 
 
 
