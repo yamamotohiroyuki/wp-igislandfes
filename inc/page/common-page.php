@@ -42,19 +42,14 @@ while ( have_posts() ) :
         while ( $the_query->have_posts() ) : $the_query->the_post();
         $page_id = get_the_ID();
         $global_menu_name = get_the_title($page_id);
-
-        $replacement = get_field('replacement',$page_id);
-        if($replacement != ""):
-          $page_link = get_page_link($replacement);
-        else:
-          $page_link = get_page_link($page_id);
-        endif;
+      
+        $page_link = get_page_link($page_id);
       ?>
 
       <div class="top-contents-list__cell">
         <div class="contents-card">
           <a href="<?php echo $page_link; ?>">
-            <figure class="contents-card__photo"><?php the_post_thumbnail('contents_thumbnail'); ?></figure>
+            <figure class="contents-card__photo"><?php the_post_thumbnail('artist_thumbnail'); ?></figure>
             <div class="contents-card__body">
               <h3><?php echo $global_menu_name; ?></h3>
             </div>

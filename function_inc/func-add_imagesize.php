@@ -6,6 +6,9 @@ add_image_size('contents_thumbnail', 900, 450, true);
 add_image_size('news_thumbnail', 540, 540, true);
 
 
+add_image_size('artist_thumbnail', 600, 400, true);
+
+
 
 /*
 add_image_size('middle_banner', 1240, 700, true);
