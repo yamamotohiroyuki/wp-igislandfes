@@ -23,6 +23,53 @@ while ( have_posts() ) :
   </div>
 </div>
   <?php
+    elseif(is_page('artists')):
+  ?>
+<div class="contents-main">
+  <div class="contents-style">
+    <?php the_content(); ?>
+    
+    <div class="top-contents-list">
+      <?php
+      $args = array(
+        'post_type' => array('page'),
+        'order' => 'ASC',
+        'orderby' => 'menu_order',
+        'post_parent' => $post->ID
+      );
+      $the_query = new WP_Query( $args );
+      if ( $the_query->have_posts() ) :
+        while ( $the_query->have_posts() ) : $the_query->the_post();
+        $page_id = get_the_ID();
+        $global_menu_name = get_the_title($page_id);
+
+        $replacement = get_field('replacement',$page_id);
+        if($replacement != ""):
+          $page_link = get_page_link($replacement);
+        else:
+          $page_link = get_page_link($page_id);
+        endif;
+      ?>
+
+      <div class="top-contents-list__cell">
+        <div class="contents-card">
+          <a href="<?php echo $page_link; ?>">
+            <figure class="contents-card__photo"><?php the_post_thumbnail('contents_thumbnail'); ?></figure>
+            <div class="contents-card__body">
+              <h3><?php echo $global_menu_name; ?></h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <?php
+        endwhile;
+      endif;
+      wp_reset_postdata();
+      ?>
+    </div>
+  </div>
+</div>
+  <?php
     elseif(is_page('movie')):
   ?>
 <div class="contents-main">
