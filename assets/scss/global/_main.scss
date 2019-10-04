@@ -460,18 +460,67 @@
   }
 
 }
-/*
-
-  <div class="top-contents-list">
-    <div class="top-contents-list__cell">
-      <div class="top-contents-card">
-        <figure class="top-contents-card__photo"><img src="<?php echo temp_add('img') ?>/istockphoto-515645702-2048x2048.jpg" alt=""></figure>
-        <div class="top-contents-card__body">
-          <h2>EVENT INFO</h2>
-          <p>イベント情報</p>
-        </div>
-      </div>
-    </div>
 
 
-*/
+
+
+
+
+
+
+
+.artist-list {
+  display: flex; padding: 0; margin: 0 -1.0rem;
+  flex-wrap: wrap; justify-content: center;
+  &__cell {
+    display: flex; padding: 1.0rem; margin: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .artist-list {
+    &__cell {
+      width: 50%;
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  .artist-list {
+    &__cell {
+      width: 33.3333%;
+    }
+  }
+
+}
+
+
+
+.top-contents-list {
+  display: flex; padding: 0; margin: 0 -1.0rem;
+  flex-wrap: wrap;
+  &__cell {
+    display: flex; padding: 1.0rem; margin: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .top-contents-list {
+    &__cell {
+      width: 50%;
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  .top-contents-list {
+    &__cell {
+      width: 33.3333%;
+    }
+  }
+
+}

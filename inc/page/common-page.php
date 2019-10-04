@@ -29,7 +29,7 @@ while ( have_posts() ) :
   <div class="contents-style">
     <?php the_content(); ?>
     
-    <div class="top-contents-list">
+    <div class="artists-list">
       <?php
       $args = array(
         'post_type' => array('page'),
@@ -46,7 +46,7 @@ while ( have_posts() ) :
         $page_link = get_page_link($page_id);
       ?>
 
-      <div class="top-contents-list__cell">
+      <div class="artists-list__cell">
         <div class="contents-card">
           <a href="<?php echo $page_link; ?>">
             <figure class="contents-card__photo"><?php the_post_thumbnail('artist_thumbnail'); ?></figure>
