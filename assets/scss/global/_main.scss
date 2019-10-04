@@ -497,30 +497,3 @@
 }
 
 
-
-.top-contents-list {
-  display: flex; padding: 0; margin: 0 -1.0rem;
-  flex-wrap: wrap;
-  &__cell {
-    display: flex; padding: 1.0rem; margin: 0;
-    width: 100%;
-  }
-}
-
-@media (min-width: 576px) {
-  .top-contents-list {
-    &__cell {
-      width: 50%;
-    }
-  }
-
-}
-
-@media (min-width: 992px) {
-  .top-contents-list {
-    &__cell {
-      width: 33.3333%;
-    }
-  }
-
-}
