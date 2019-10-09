@@ -4,7 +4,7 @@
     <li><a href="https://yda-diving.com" target="_blank"><span><img src="<?php echo temp_add('img/banner') ?>/banner-yda.png" alt="八重山ダイビング協会"></span></a></li>
   </ul>
   
-  <h2><span>後援</span></h2>
+  <h2><span>特別協賛</span></h2>
   <ul class="sponsor-list">
     <li><a href="http://shimapoyo.com" target="_blank"><span><img src="<?php echo temp_add('img/banner') ?>/banner-shimapoyo.png" alt="石垣優良ダイビングサイト「島ぽよ」"></span></a></li>
   </ul>
@@ -16,6 +16,16 @@
         <img src="http://img.youtube.com/vi/<?php echo $movie_id; ?>/maxresdefault.jpg" alt="">
       </a>
     </li>
+  </ul>
+  
+  <h2><span>協賛</span></h2>
+  <ul class="sponsor-list">
+    <li><a href="https://www.dentsulive.co.jp" target="_blank"><span><img src="<?php echo temp_add('img/banner') ?>/banner-dentsulive.png" alt="電通ライブ"></span></a></li>
+  </ul>
+  
+  <h2><span>後援</span></h2>
+  <ul class="sponsor-list">
+    <li><a href="https://www.mic21.com" target="_blank"><span><img src="<?php echo temp_add('img/banner') ?>/banner-mic21.png" alt="mic21"></span></a></li>
   </ul>
   
 </div>
