@@ -615,3 +615,47 @@
   }
 }
 
+
+
+
+
+.faq-list {
+  display: block; padding: 0; margin: 0;
+  &__title {
+    display: flex; padding: 1.0rem 0 0.25rem 0; margin: 0;
+    font-size: 1.25rem;
+    border-top: solid 1px  $brandcolor_main;
+    &::before {
+      display: block; padding: 0; margin: 0;
+      width: 1.5rem;
+      content: 'Q.';
+      color: $brandcolor_main;
+      flex-shrink: 1;
+      @include google_font_bold;
+    }
+    &__inner {
+      display: block; padding: 0; margin: 0;
+      width: 100%; flex-grow: 1;
+    }
+  }
+  &__contents {
+    display: flex; padding: 0 0 2.0rem 0; margin: 0;
+    &::before {
+      display: block; padding: 0.25rem 0; margin: 0;
+      width: 1.5rem; font-size: 1.25rem;
+      content: 'A.';
+      color: $brandcolor_gradient-3;
+      flex-shrink: 1;
+      @include google_font_bold;
+    }
+    &__inner {
+      display: block; padding: 0; margin: 0;
+      width: 100%; flex-grow: 1;
+    }
+  }
+}
+/*
+
+      <dt class="faq-list__title"><span class="faq-list__title__inner"><?php the_title(); ?></span></dt>
+      <dd class="faq-list__contents"><div class="faq-list__contents__inner"><?php the_content(); ?></div></dd>
+*/

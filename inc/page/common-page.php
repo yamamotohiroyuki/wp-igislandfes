@@ -65,6 +65,39 @@ while ( have_posts() ) :
   </div>
 </div>
   <?php
+    elseif(is_page('faq')):
+  ?>
+<div class="contents-main">
+  <div class="contents-style">
+    <?php the_content(); ?>
+    
+    <?php
+    $args = array(
+      'post_type' => array('faq_list'),
+      'order' => 'DESC',
+      'posts_per_page' => 9999
+    );
+    $the_query = new WP_Query( $args );
+    if ( $the_query->have_posts() ) :
+    ?>
+    <dl class="faq-list">
+    <?php
+      while ( $the_query->have_posts() ) : $the_query->the_post();
+    ?>
+      <dt class="faq-list__title"><span class="faq-list__title__inner"><?php the_title(); ?></span></dt>
+      <dd class="faq-list__contents"><div class="faq-list__contents__inner"><?php the_content(); ?></div></dd>
+    <?php
+      endwhile;
+    ?>
+    </dl>
+    <?php
+    endif;
+    wp_reset_postdata();
+    ?>
+    
+  </div>
+</div>
+  <?php
     elseif(is_page('movie')):
   ?>
 <div class="contents-main">
