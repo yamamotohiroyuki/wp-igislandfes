@@ -141,7 +141,6 @@ while ( have_posts() ) :
       <li>
         <figure>
           <a href="<?php echo $photo_large_url[0]; ?>" class="js-modal-gallery" data-group="gallery">
-            <div class="" style="background-image: url(<?php echo $photo_url[0]; ?>)"></div>
             <img src="<?php echo $photo_url[0]; ?>" alt="<?php echo $photo_text; ?>">
             <span><?php echo $photo_text; ?></span>
           </a>
@@ -170,7 +169,7 @@ while ( have_posts() ) :
       <li>
         <figure>
           <a href="<?php echo $photo_large_url[0]; ?>" class="js-modal-gallery" data-group="gallery">
-            <div class="gallery-list__photo" style="background-image: url(<?php echo $photo_url[0]; ?>)"></div>
+            <div class="gallery-list__photo" style="background-image: url(<?php echo $photo_large_url[0]; ?>)"></div>
             <span><?php echo $photo_text; ?></span>
           </a>
         </figure>
