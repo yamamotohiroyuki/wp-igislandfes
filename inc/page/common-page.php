@@ -103,7 +103,7 @@ while ( have_posts() ) :
 <div class="contents-main">
   <div class="contents-style">
     <?php the_content(); ?>
-    <ul class="gallery-list">
+    <ul class="gallery-list is-movie">
       <?php
       if(have_rows('movies')):
         while(have_rows('movies')): the_row();
@@ -130,7 +130,7 @@ while ( have_posts() ) :
 <div class="contents-main">
   <div class="contents-style">
     <?php the_content(); ?>
-    <ul class="gallery-list">
+    <ul class="gallery-list is-photo">
       <?php
       if(have_rows('photos')):
         while(have_rows('photos')): the_row();
@@ -141,7 +141,36 @@ while ( have_posts() ) :
       <li>
         <figure>
           <a href="<?php echo $photo_large_url[0]; ?>" class="js-modal-gallery" data-group="gallery">
+            <div class="" style="background-image: url(<?php echo $photo_url[0]; ?>)"></div>
             <img src="<?php echo $photo_url[0]; ?>" alt="<?php echo $photo_text; ?>">
+            <span><?php echo $photo_text; ?></span>
+          </a>
+        </figure>
+      </li>
+      <?php
+        endwhile;
+      endif; ?>
+    </ul>
+  </div>
+</div>
+  <?php
+    elseif(is_page('winners')):
+  ?>
+<div class="contents-main">
+  <div class="contents-style">
+    <?php the_content(); ?>
+    <ul class="gallery-list is-photo">
+      <?php
+      if(have_rows('photos')):
+        while(have_rows('photos')): the_row();
+          $photo_url = wp_get_attachment_image_src(get_sub_field('photo'), 'contents_thumbnail');
+          $photo_large_url = wp_get_attachment_image_src(get_sub_field('photo'), 'large');
+          $photo_text = get_sub_field('text');
+      ?>
+      <li>
+        <figure>
+          <a href="<?php echo $photo_large_url[0]; ?>" class="js-modal-gallery" data-group="gallery">
+            <div class="gallery-list__photo" style="background-image: url(<?php echo $photo_url[0]; ?>)"></div>
             <span><?php echo $photo_text; ?></span>
           </a>
         </figure>
